@@ -17,7 +17,7 @@
     <em:localized>
       <RDF:Description em:locale="en-US"
                        em:name="Add Has-Attachment Header"
-                       em:description="Provides ability to set X-Moz-Has-Attachment header for sending mails."
+                       em:description="Provides ability to set X-Mozilla-Has-Attachment header for sending mails."
                        em:creator="ClearCode Inc."
                        em:homepageURL="http://www.clear-code.com/">
       </RDF:Description>
@@ -26,7 +26,7 @@
     <em:localized>
       <RDF:Description em:locale="ja"
                        em:name="Add Has-Attachment Header"
-                       em:description="送信するメールに対し、X-Moz-Has-Attachmentヘッダを付与します。"
+                       em:description="送信するメールに対し、X-Mozilla-Has-Attachmentヘッダを付与します。"
                        em:creator="ClearCode Inc."
                        em:homepageURL="http://www.clear-code.com/">
       </RDF:Description>
