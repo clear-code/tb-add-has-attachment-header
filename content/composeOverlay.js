@@ -3,6 +3,16 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 var AddHasAttachmentHeaderCompose = {
+  addHeader: function(aCompFields) {
+    aCompFields.otherRandomHeaders += 'X-Mozilla-Has-Attach: '+ this.headerValue + '\r\n';
+  },
+
+  get headerValue() {
+    var attachmentsBacket = GetMsgAttachmentElement();
+    var attachmentsCount = attachmentsBacket.itemCount;
+    return attachmentsCount > 0 ? 'yes' : 'no';
+  },
+
   init: function() {
   },
 
@@ -36,3 +46,12 @@ var AddHasAttachmentHeaderCompose = {
 };
 
 document.documentElement.addEventListener('compose-window-init', AddHasAttachmentHeaderCompose, false);
+
+(function() {
+  var originalRecipients2CompFields = window.Recipients2CompFields;
+  window.Recipients2CompFields = function Recipients2CompFields(aCompFields) {
+    var returnValue = originalRecipients2CompFields.apply(this, arguments);
+    AddHasAttachmentHeaderCompose.addHeader(aCompFields);
+    return returnValue;
+  };
+})();
