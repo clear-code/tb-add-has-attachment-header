@@ -3,8 +3,10 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 var AddHasAttachmentHeaderCompose = {
+  HEADER: 'X-Mozilla-Has-Attachment',
+
   addHeader: function(aCompFields) {
-    aCompFields.otherRandomHeaders += 'X-Mozilla-Has-Attach: '+ this.headerValue + '\r\n';
+    aCompFields.otherRandomHeaders += this.HEADER + ': '+ this.headerValue + '\r\n';
   },
 
   get headerValue() {
