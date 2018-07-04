@@ -5,7 +5,7 @@
   <RDF:Description RDF:about="urn:mozilla:install-manifest"
                    em:id="add-has-attachment-header@clear-code.com"
                    em:name="Add Has-Attachment Header"
-                   em:version="0.1"
+                   em:version="0.2"
                    em:description="Provides ability to set X-Moz-Has-Attachment header for sending mails."
                    em:creator="ClearCode Inc."
                    em:unpack="true"
@@ -35,8 +35,8 @@
 	<em:targetApplication>
       <!-- Thunderbird -->
 		<Description em:id="{3550f703-e582-4d05-9a08-453d09bdfdc6}"
-			em:minVersion="17.0"
-			em:maxVersion="24.*" />
+			em:minVersion="52.0"
+			em:maxVersion="60.*" />
 	</em:targetApplication>
   </RDF:Description>
 </RDF:RDF>
